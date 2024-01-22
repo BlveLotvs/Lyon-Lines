@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ligne D du Métro de Lyon - LyonLines</title>
+    <!-- Liens vers les feuilles de style de Bootstrap et du site -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bg_image.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- En-tête avec barre de navigation -->
+    <header class="my-custom-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="Logo.png" alt="Logo du site" style="height:150px;"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Histoire.html">Histoire du Métro</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLine" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Lignes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownLine">
+                            <li><a class="dropdown-item" href="LA.html">Métro A</a></li>
+                            <li><a class="dropdown-item" href="LB.html">Métro B</a></li>
+                            <li><a class="dropdown-item" href="LC.html">Métro C</a></li>
+                            <li><a class="dropdown-item" href="LD.html">Métro D</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFuniLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">Funiculaires</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownFuni">
+                            <li><a class="dropdown-item" href="Funi.html">F1</a></li>
+                            <li><a class="dropdown-item" href="Funi.html">F2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Projects.html">Projets Futurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Galery.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Links.html">Liens et contacts utiles</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container text-center">
+        <!-- Section pour le tracé et le titre de la ligne -->
+        <section id="ligne-map" class="mb-4">
+            <h2>Ligne D du métro</h2>
+            <div style="display: inline-block; text-align: center;">
+                <img src="css/img/tracéD.png" alt="Tracé de la Ligne D" class="img-fluid">
+                <p style="background-color: white; padding: 10px; margin: 0;">Tracé géographiquement exact de la ligne
+                    D. (Source Wikipedia)</p>
+            </div>
+        </section>
+
+
+        <!-- Section pour la description de la ligne -->
+        <section id="ligne-description">
+            <div class="p-3 my-2" style="background-color: #f00a0a; color: white;"> <!-- Fond rouge -->
+                <ul class="list-unstyled">
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Relie :</strong>
+                        Gare de Vénissieux à Gare de Vaise</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Ouverture :</strong>
+                        1991</li>
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Longueur
+                            :</strong> 12,6
+                        km</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Matériel roulant
+                            :</strong> MPL 85</li>
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Nombre de
+                            stations :</strong> 15
+                    </li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Pilotage :</strong>
+                        Automatique</li>
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Communes
+                            desservies
+                            :</strong> Lyon, Bron, Vénissieux</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Correspondances TGV -
+                            TER
+                            :</strong>
+                        Gorge de Loup, Gare de Vénissieux, Gare de Vaise </li>
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Correspondances
+                            Tram :
+                        </strong> Grange-Blanche (T2-T5), Sans-Souci (T4 à distance), Guillotière-Gabriel Péri
+                        (T1), Jean Macé (T2), Mermoz-Pinel (T2-T6), Gare de Vénissieux (T4-T10)</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Correspondances
+                            Métro-Funiculaire
+                            :</strong>
+                        Saxe-Gambetta(B), Bellecour (A), Vieux-Lyon-Cathédrale St Jean (F1-F2) </li>
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Prolongements :
+                        </strong> Grange-Blanche -> Gare de Vénissieux (4 stations, 1992)</br>
+                        Gorge de Loup -> Gare de Vaise (2 stations, 1997)</br></li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Projets envisagés :
+                        </strong> Prolongement Nord vers Vaise Industrie (2050) - Prolongement Sud vers Vénissieux Sud
+                        (Boulevard Urbain Sud) (2050) </li>
+                    <li style="background-color: rgb(38 115 0); color: white; padding: 10px;"><strong>Sites touristiques
+                            desservis
+                            :</strong>
+                        Institut Lumière, Manufacture des Tabacs (Université Lyon 3), Place Bellecour, Vieux-Lyon,
+                        Cathédrale St Jean, Fourvière, Parc de Parilly, Quartier de Vaise </li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Anecdote :
+                        </strong> La ligne est la première du monde non-équipée de
+                        portes-palières, à être 100% automatique, quelques mois après son ouverture en 1992 </li>
+
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="my-custom-header">
+        <p>Tout droits réservés - Jules Nkongo Same M1 G2M Université Paris 8</p>
+    </footer>
+
+    <!-- Scripts JavaScript pour Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

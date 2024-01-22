@@ -1,0 +1,116 @@
+body {
+    padding-top: 56px;
+    background-color: rgb(170, 77, 77);
+    color: black;
+}
+
+header {
+    background-color: #87CEEB;
+    color: white;
+}
+
+.footer {
+    background-color: black;
+    padding: 40px 0;
+    margin-top: 40px;
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff6347;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+}
+
+nav ul ul {
+    display: none;
+    width: 150px;
+}
+
+nav li {
+    background: #CCCCCC;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #000;
+    padding: 4px 0 4px;
+    display: block;
+    width: 150px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0px;
+    text-align: center;
+}
+
+nav ul.niveau1 li.sousmenu:hover ul.niveau2 {
+    display: block;
+}
+
+nav li:hover {
+    background: #EDD;
+}
+
+nav li.sousmenu:hover {
+    background: #EBB;
+}
+
+a {
+    color: var(--rouge-clair);
+}
+
+a:hover {
+    color: var(--bleu-ciel);
+}
+
+#mapid {
+    width: 100%;
+
+    height: 400px;
+
+}
+
+.map-legend {
+    padding: 6px 8px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    /* Autres styles selon le besoin */
+}
+
+.map-legend h4 {
+    margin-top: 0;
+}
+
+.map-legend .line {
+    width: 30px;
+    /*longueur de la ligne */
+    height: 3px;
+    /*largeur de la ligne */
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.bg-pink {
+    background-color: rgb(226, 23, 199);
+    /* Remplacez par la teinte exacte de rose souhaitée */
+}

@@ -1,0 +1,111 @@
+body {
+    padding-top: 10px;
+}
+
+[class*="col-lg-3"],
+footer {
+    background-color: green;
+    color: azure;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-lg-6"],
+footer {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-lg-8"],
+footer {
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-md-12"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-md-8"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-md-4"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-md-3 col-md-offset-1"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-md-5 col-md-offset-1"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-lg-12"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-lg-10"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+[class*="col-lg-2"],
+footer {
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+}

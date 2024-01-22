@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LyonLines</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bg_image.css" rel="stylesheet">
+    <!-- Bibliothèque JS Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header class="my-custom-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="Logo.png" alt="Logo du site" style="height:150px;"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Histoire.html">Histoire du Métro</a></li>
+                    <!-- Exemple d'élément avec sous-menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLine" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Lignes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownLine">
+                            <li><a class="dropdown-item" href="LA.html">Métro A</a></li>
+                            <li><a class="dropdown-item" href="LB.html">Métro B</a></li>
+                            <li><a class="dropdown-item" href="LC.html">Métro C</a></li>
+                            <li><a class="dropdown-item" href="LD.html">Métro D</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFuniLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">Funiculaires</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownFuni">
+                            <li><a class="dropdown-item" href="Funi.html">F1</a></li>
+                            <li><a class="dropdown-item" href="Funi.html">F2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Projects.html">Projets Futurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Galery.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Links.html">Liens et contacts utiles</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main role="main" class="container">
+        <!-- section introductive -->
+        <section id="intro">
+            <h1>Bienvenue sur LyonLines</h1>
+            <p class="bg white p-2">La réference pour connaître mieux les métros de Lyon</p>
+        </section>
+
+        <!-- section carte et illustration -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Plongez-vous dans l'histoire des métros lyonnais</h2>
+                <p>Ce site permet d'en connaître davantage sur le réseau de métro de la ville de Lyon avec des
+                    présentations de chaque ligne.</p>
+                <div id="mapid_69" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src="Logo.png" alt="Logo" style="max-width:100%; height:auto;">
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="my-custom-header">
+        <p>Tout droits réservés - Jules Nkongo Same M1 G2M Université Paris 8</p>
+    </footer>
+    <script>
+        // Créer la carte centrée sur Lyon
+        var mymap = L.map('mapid_69').setView([45.764043, 4.835659], 13); // Coordonnées de Lyon, avec 13 de zoom
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mymap);
+
+        // ajouter des marqueurs, des cercles ou des polygones ici
+        // Exemple: L.marker([45.764043, 4.835659]).addTo(mymap).bindPopup("Un exemple de popup.");
+        // Charger les données GeoJSON dans la carte 
+
+        fetch('metro.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: function (feature) {
+                        // Convertir la couleur RGB en chaîne de caractères CSS
+                        var rgb = feature.properties.couleur.split(' ');
+                        var color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+
+                        return { color: color };
+                    },
+                    onEachFeature: function (feature, layer) {
+                        // Ajouter un popup avec le nom de la ligne
+                        if (feature.properties && feature.properties.ligne) {
+                            var url = "index.html"; // URL par défaut
+
+                            // Définir l'URL en fonction de la ligne
+                            switch (feature.properties.ligne) {
+                                case "Métro A":
+                                    url = "LA.html";
+                                    break;
+                                case "Métro B":
+                                    url = "LB.html";
+                                    break;
+                                case "Métro C":
+                                    url = "LC.html";
+                                    break;
+                                case "Métro D":
+                                    url = "LD.html";
+                                    break;
+                                case "Funiculaire F1":
+                                    url = "Funi.html";
+                                    break;
+                                case "Funiculaire F1":
+                                    url = "Funi.html";
+                                    break;
+                            }
+
+                            var popupContent = feature.properties.ligne + "<br><a href='" + url + "'> + d'Infos </a>";
+                            layer.bindPopup(popupContent);
+
+                            // insertion de la légende à la carte
+                            var legend = L.control({ position: 'bottomright' });
+
+                            legend.onAdd = function (map) {
+                                var div = L.DomUtil.create('div', 'info legend');
+                                var lines = ['A', 'B', 'C', 'D'];
+                                var descriptions = {
+                                    'A': 'Description de la ligne A',
+                                    'B': 'Description de la ligne B',
+                                    'C': 'Description de la ligne C',
+                                    'D': 'Description de la ligne D'
+                                };
+
+                                div.innerHTML = '<h4>Légende<h4>';
+                                for (var i = 0; i < lines.length; i++) {
+                                    div.innerHTML +=
+                                        '<i style="background:' + getColor(lines[i]) + '"></i> ' +
+                                        lines[i] + ': ' + descriptions[lines[i]] + '<br>';
+                                }
+
+                                return div;
+                            };
+
+                            legend.addTo(mymap);
+
+                            function getColor(line) {
+                                // Retourne la couleur correspondante à la ligne
+                                switch (line) {
+                                    case 'A': return 'red';
+                                    case 'B': return 'blue';
+                                    case 'C': return 'yellow';
+                                    case 'D': return 'green'
+                                    // Ajouter les autres couleurs ici
+                                    default: return 'gray';
+                                }
+
+                            }
+                        }
+                    }
+                }).addTo(mymap);
+            })
+            .catch(error => console.error('Erreur lors du chargement du GeoJSON:', error)); //Contrôle des erreurs d'affichage des données geojson 
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

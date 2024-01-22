@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ligne B du Métro de Lyon - LyonLines</title>
+    <!-- Liens vers les feuilles de style de Bootstrap et du site -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bg_image.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- En-tête avec barre de navigation -->
+    <header class="my-custom-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="Logo.png" alt="Logo du site" style="height:150px;"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Histoire.html">Histoire du Métro</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLine" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Lignes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownLine">
+                            <li><a class="dropdown-item" href="LA.html">Métro A</a></li>
+                            <li><a class="dropdown-item" href="LB.html">Métro B</a></li>
+                            <li><a class="dropdown-item" href="LC.html">Métro C</a></li>
+                            <li><a class="dropdown-item" href="LD.html">Métro D</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFuniLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">Funiculaires</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownFuni">
+                            <li><a class="dropdown-item" href="Funi.html">F1</a></li>
+                            <li><a class="dropdown-item" href="Funi.html">F2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Projects.html">Projets Futurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Galery.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Links.html">Liens et contacts utiles</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container text-center">
+        <!-- Section pour le tracé et le titre de la ligne -->
+        <section id="ligne-map" class="mb-4">
+            <h2>Ligne B du métro</h2>
+            <div style="display: inline-block; text-align: center;">
+                <img src="css/img/tracéB.png" alt="Tracé de la Ligne B" class="img-fluid">
+                <p style="background-color: white; padding: 10px; margin: 0;">Tracé géographiquement exact de la ligne
+                    B. (Source Ferro-Lyon)</p>
+            </div>
+        </section>
+
+
+        <!-- Section pour la description de la ligne -->
+        <section id="ligne-description">
+            <div class="p-3 my-2" style="background-color: #f00a0a; color: white;"> <!-- Fond rouge -->
+                <ul class="list-unstyled">
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Relie :</strong>
+                        Charpennes à Saint-Genis Laval Hôpital Lyon Sud</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Ouverture :</strong>
+                        1978</li>
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Longueur :</strong> 10,2
+                        km</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Matériel roulant
+                            :</strong> MPL 16</li>
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Nombre de
+                            stations :</strong> 12
+                    </li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Pilotage :</strong>
+                        Automatique</li>
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Communes desservies
+                            :</strong> Villeurbanne, Lyon, Oullins-Pierre-Bénite, Saint-Genis-Laval</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Correspondances TGV -
+                            TER
+                            :</strong>
+                        Gare Part-Dieu - Vivier Merle, Jean-Macé, Gare d'Oullins </li>
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Correspondances Tram :
+                        </strong> Charpennes (T1-T4-T9), Brotteaux (T1-T4 à distance) Gare Part-Dieu - Vivier Merle
+                        (T1-T3-T4), Place Guichard
+                        (T1), Jean Macé (T2), Debourg (T1-T6), Stade de Gerland - Le LOU (T10)</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Correspondances Métro
+                            :</strong>
+                        Charpennes (B), Saxe-Gambetta(D) </li>
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Prolongements :
+                        </strong> Part-Dieu -> Jean Macé (3 stations, 1981)</br>
+                        Jean Macé -> Stade de Gerland (3 stations, 2000)</br>
+                        Stade de Gerland -> Gare d'Oullins (1 station, 2013)</br>
+                        Gare d'Oullins -> Saint-Genis-Laval Hôpital Lyon Sud (2 stations, 2023)</li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Projets envisagés :
+                        </strong> Prolongement Sud vers l'A450 (2035) - Prolongement Nord jusqu'à la Gare de
+                        Sathonay-Rillieux (2050) </li>
+                    <li style="background-color: #0f5ec7; color: white; padding: 10px;"><strong>Sites touristiques
+                            desservis
+                            :</strong>
+                        Ancienne Gare des Brotteaux, Part-Dieu Centre Commercial, Bourse du Travail, Halle Tony Garnier,
+                        Stade de Gerland, Théâtre de la Renaissance </li>
+                    <li style="background-color: #f00a0a; color: white; padding: 10px;"><strong>Anecdote :
+                        </strong> La ligne comprend 2 stations "fantômes" qui n'ont jamais ouvertes malgré des quais
+                        construits car les travaux n'ont pas été mené à terme, la station "Lortet" entre Jean Macé et
+                        Place Jean Jaurès et la station "Plaine des Jeux" entre Stade de Gerland et Gare d'Oullins </li>
+
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="my-custom-header">
+        <p>Tout droits réservés - Jules Nkongo Same M1 G2M Université Paris 8</p>
+    </footer>
+
+    <!-- Scripts JavaScript pour Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
