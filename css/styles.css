@@ -131,3 +131,10 @@ ul.list-unstyled {
     line-height: 1.6;
     /* Augmente l'espacement entre les lignes */
 }
+
+.links-section .bg-white {
+    background-color: white;
+    /* ajouter le fond en blanc */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
