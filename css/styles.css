@@ -114,3 +114,20 @@ a:hover {
     background-color: rgb(226, 23, 199);
     /* Remplacez par la teinte exacte de rose souhaitée */
 }
+
+.link-styled {
+    font-size: 1.2em;
+    /* Augmente la taille du texte de links.html */
+    color: #0056b3;
+    /* Couleur du lien Links.html */
+}
+
+.link-styled:hover {
+    color: #004080;
+    /* Couleur du lien au survol */
+}
+
+ul.list-unstyled {
+    line-height: 1.6;
+    /* Augmente l'espacement entre les lignes */
+}
